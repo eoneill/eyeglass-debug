@@ -1,0 +1,20 @@
+@function -debug--main($namespace, $message) {
+  $tmp: -eyeglass-debug--debug-js($namespace, inspect($message));
+  @return -debug--enabled($namespace);
+}
+
+@mixin -debug--main($namespace, $message) {
+  $tmp: -debug--main($namespace, $message);
+}
+
+@function -debug--enable($namespaces...) {
+  @return -eyeglass-debug--enable-js($namespaces);
+}
+
+@mixin -debug--enable($namespaces...) {
+  $tmp: -debug--enable($namespaces);
+}
+
+@function -debug--enabled($namespace) {
+  @return -eyeglass-debug--enabled-js($namespace);
+}

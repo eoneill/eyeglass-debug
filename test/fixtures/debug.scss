@@ -1,0 +1,13 @@
+@import "eyeglass-debug";
+
+@include debug-enable(namespace);
+$tmp: debug("namespace", "message");
+
+@include debug-enable(foo);
+@include debug("foo", "bar");
+
+
+@include debug-enable(foo, bar, baz);
+@include debug("baz", "qux");
+
+@include debug(namespace, (map: true));

@@ -1,0 +1,18 @@
+// this exposes the aliased convenience methods
+@import "./noconflict";
+
+@function debug($namespace, $message) {
+  @return -debug--main($namespace, $message);
+}
+
+@mixin debug($namespace, $message) {
+  @include -debug--main($namespace, $message);
+}
+
+@function debug-enable($namespaces...) {
+  @return -debug--enable($namespaces...);
+}
+
+@mixin debug-enable($namespaces...) {
+  @include -debug--enable($namespaces...);
+}
